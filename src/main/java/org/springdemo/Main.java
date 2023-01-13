@@ -1,6 +1,7 @@
 package org.springdemo;
 
 
+import org.springdemo.collections.Employee;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,5 +15,8 @@ public class Main {
         System.out.println(student1);
         System.out.println(student2);
         System.out.println(student3);
+        Employee employee1= (Employee) context.getBean("employee1");
+        System.out.println(employee1);
+
     }
 }

@@ -34,6 +34,40 @@
     <!--this is our third bean using p schema-->
     <bean class="org.springdemo.Student" name="student3" p:studentId="223" p:studentName="ram" p:studentAddress="raipur" />
 
+   <!--Set up for the employee package -->
+    <!--private String name;
+    private List<String> phones;
+    private Set<String> addresses;
+    private Map<String, String> courses;-->
+    <bean class="org.springdemo.collections.Employee" name="employee1">
+        <property name="name" value="ram" />
+        <property name="phones">
+            <list>
+                <value>9191919</value>
+                <value>637864823</value>
+                <value>64783466</value>
+                <value>687362345</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Delhi</value>
+                <value>Lucknow</value>
+                <value>Kanpur</value>
+            </set>
+        </property>
+       <property name="courses">
+           <map>
+               <entry key="jave" value="2months"/>
+               <entry key="python" value="1months"/>
+               <entry key="c" value="1month"/>
+           </map>
+       </property>
+
+
+    </bean>
+
+
 
 
 </beans>
