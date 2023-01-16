@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="org.springdemo.reference.B" name="bref">
+        <property name="y" value="10101" />
+    </bean>
+
+    <bean class="org.springdemo.reference.A" name="aref">
+        <property name="x" value="12"/>
+        <property name="obj">
+            <ref bean="bref"/>
+        </property>
+    </bean>
+
+<!--yaha p schema use kiya gaya hai -->
+    <bean class="org.springdemo.reference.A" name="arefWithPSchema" p:x="12" p:obj-ref="bref" />
+
+<!--yaha pe ref use kiya hai to get reference of other object     -->
+    <bean class="org.springdemo.reference.A" name="aref2">
+        <property name="x" value="12"/>
+        <property name="obj" ref="bref"/>
+    </bean>
+
+    </beans>

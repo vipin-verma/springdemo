@@ -8,6 +8,7 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
     <!--this is our first bean -->
+<!--    this is our setter injection-->
     <bean class="org.springdemo.Student" name="student1">
         <property name="studentId">
             <value>1234</value>
@@ -63,11 +64,5 @@
                <entry key="c" value="1month"/>
            </map>
        </property>
-
-
     </bean>
-
-
-
-
 </beans>
