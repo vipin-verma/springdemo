@@ -4,8 +4,11 @@ package org.springdemo;
 import org.springdemo.collections.Employee;
 import org.springdemo.constructorInjection.Addition;
 import org.springdemo.constructorInjection.Person;
+import org.springdemo.lifecycle.ColdDrink;
+import org.springdemo.lifecycle.Samosa;
 import org.springdemo.reference.A;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -49,6 +52,25 @@ public class Main {
         //ambiguity problem solver wala question
         Addition a = (Addition) context3.getBean("add");
         a.doSum();
+
+
+        System.out.println("###########################lifecycle of samosa using xml###################################");
+        //lifecycle banane wala ek bean banana hai
+        AbstractApplicationContext context4 = new ClassPathXmlApplicationContext("lifecycle.xml");
+        Samosa s = (Samosa) context4.getBean("s1");
+        System.out.println(s);
+        context4.registerShutdownHook();
+
+
+        System.out.println("###########################lifecycle of colddrink using interfaces###################################");
+        ///lifecycle of colddrink using interfaces
+        AbstractApplicationContext context5 = new ClassPathXmlApplicationContext("lifecycle.xml");
+        ColdDrink c = (ColdDrink) context5.getBean("pepsi");
+        System.out.println(c);
+
+
+
+
 
 
 
