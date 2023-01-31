@@ -1,6 +1,7 @@
 package org.springdemo;
 
 
+import org.springdemo.autowiriing.EmployeeAutowiring;
 import org.springdemo.collections.Employee;
 import org.springdemo.constructorInjection.Addition;
 import org.springdemo.constructorInjection.Person;
@@ -67,6 +68,12 @@ public class Main {
         AbstractApplicationContext context5 = new ClassPathXmlApplicationContext("lifecycle.xml");
         ColdDrink c = (ColdDrink) context5.getBean("pepsi");
         System.out.println(c);
+
+
+        System.out.println("###########################autowiring using xml ki kahani###################################");
+        AbstractApplicationContext autowiringcontext = new ClassPathXmlApplicationContext("autowiring.xml");
+        EmployeeAutowiring employeeAutowiring = (EmployeeAutowiring) autowiringcontext.getBean("employee");
+        System.out.println(employeeAutowiring);
 
 
 
