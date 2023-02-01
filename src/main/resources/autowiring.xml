@@ -22,7 +22,8 @@
 
 <!--    <bean class="org.springdemo.autowiriing.EmployeeAutowiring"  name="employee"  autowire="byType"   />-->
 
-    <bean class="org.springdemo.autowiriing.EmployeeAutowiring"  name="employee"  autowire="constructor"   />
+    <bean class="org.springdemo.autowiriing.EmployeeAutowiring"  name="employee"  autowire="byName"   />
+<!--    <bean class="org.springdemo.autowiriing.EmployeeAutowiring"  name="employee"  autowire="constructor"   />-->
 
 
 
