@@ -15,7 +15,14 @@
         <property name="country" value="india"/>
     </bean>
 
-    <bean class="org.springdemo.autowiriing.EmployeeAutowiring"  name="employee"  autowire="byName"   />
+<!--    <bean class="org.springdemo.autowiriing.AutowireAddress" name="autowireAddress1">-->
+<!--        <property name="city" value="raipur"/>-->
+<!--        <property name="country" value="india"/>-->
+<!--    </bean>-->
+
+<!--    <bean class="org.springdemo.autowiriing.EmployeeAutowiring"  name="employee"  autowire="byType"   />-->
+
+    <bean class="org.springdemo.autowiriing.EmployeeAutowiring"  name="employee"  autowire="constructor"   />
 
 
 
