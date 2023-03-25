@@ -18,7 +18,7 @@
 
 <!--    yaha pe constructor arg wala bean banana hai -->
     <bean class="org.springdemo.constructorInjection.Person" name="person" >
-        <constructor-arg value="vipin" />
+         <constructor-arg value="vipin" />
         <constructor-arg value="898" type="int" />
         <constructor-arg ref="certag"/>
     </bean>
