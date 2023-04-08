@@ -10,15 +10,15 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean class="org.springdemo.lifecycle.Samosa" name="s1" init-method="init" destroy-method="destroy">
+    <bean class="org.springdemo.reference.lifecycle.Samosa" name="s1" init-method="init" destroy-method="destroy">
         <property name="price" value="10"/>
     </bean>
 
-    <bean class="org.springdemo.lifecycle.ColdDrink" name="pepsi" >
+    <bean class="org.springdemo.reference.lifecycle.ColdDrink" name="pepsi" >
         <property name="price" value="100" />
     </bean>
 
-    <bean class="org.springdemo.lifecycle.School" name="balaji">
+    <bean class="org.springdemo.reference.lifecycle.School" name="balaji">
         <property name="subject" value="physics"/>
     </bean>
 

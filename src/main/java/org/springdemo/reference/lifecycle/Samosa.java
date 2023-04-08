@@ -1,4 +1,4 @@
-package org.springdemo.lifecycle;
+package org.springdemo.reference.lifecycle;
 
 public class Samosa {
    private int price;
